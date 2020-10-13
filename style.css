@@ -4,6 +4,7 @@
   top: 40px;
   background-color: #333;
   color: #fff;
+  font-size: 20px;
   display: block;
 }
 
@@ -15,8 +16,8 @@
 
 .container {
   border: 1px solid black;
-  height: 400px;
-  width: 600px;
+  height: 500px;
+  width: 800px;
   margin: 0 auto;
 }
 
@@ -26,4 +27,11 @@
   background-color: yellow;
   height: 80px;
   width: 80px;
+}
+
+.congrats {
+  display: flex;
+  text-align: center;
+  color: blueviolet;
+  font-size: 30px;
 }
