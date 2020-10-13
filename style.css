@@ -1,0 +1,30 @@
+.startButton {
+  position: relative;
+  left: 40px;
+  top: 40px;
+  background-color: #333;
+  color: #fff;
+  display: block;
+}
+
+.header {
+  display: block;
+  text-align: center;
+  color: #3f3f3f;
+}
+
+.container {
+  display: block;
+  border: 1px solid black;
+  text-align: center;
+  height: 400px;
+  width: 600px;
+}
+
+.targetButton {
+  position: relative;
+  display: none;
+  background-color: yellow;
+  width: 100px;
+  height: 100px;
+}
