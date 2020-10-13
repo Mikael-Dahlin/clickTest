@@ -14,17 +14,16 @@
 }
 
 .container {
-  display: block;
   border: 1px solid black;
-  text-align: center;
   height: 400px;
   width: 600px;
+  margin: 0 auto;
 }
 
 .targetButton {
   position: relative;
   display: none;
   background-color: yellow;
-  width: 100px;
-  height: 100px;
+  height: 80px;
+  width: 80px;
 }
