@@ -5,6 +5,7 @@ console.log(container.clientHeight);
 console.log(container.clientWidth);
 console.log(targetButton.clientHeight);
 console.log(targetButton.clientWidth);
+
 const randomizer = (element) => {
     const maxHeight = container.clientHeight - element.clientHeight;
     const maxWidth = container.clientWidth - element.clientWidth;
