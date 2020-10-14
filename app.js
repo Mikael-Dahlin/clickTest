@@ -35,7 +35,7 @@ targetButton.addEventListener('click', () => {
         header.textContent = `${header.textContent}, ${counter}/15`
         if(counter === 15){
             const h1 = document.createElement('h1');
-            h1.textContent = `Congrats you managed to click the target 15 times!, with an average time per target of ${totalTime/counter} seconds`;
+            h1.textContent = `Congrats you managed to click the target 15 times!, with an average time per target of ${Math.round(totalTime/counter*10000)/10000} seconds`;
             h1.classList.add("congrats");
             container.appendChild(h1);
             return;
