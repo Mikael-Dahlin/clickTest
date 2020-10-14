@@ -8,6 +8,7 @@ const side = `${squareSize}px`
 let showButtonTime;
 let clickButtonTime;
 let counter;
+let totalTime;
 
 const buttonSetup = () => {
     targetButton.style.height = side;
@@ -16,6 +17,7 @@ const buttonSetup = () => {
 
 const start = () => {
     counter = 0;
+    totalTime = 0;
     header.textContent = originalHeaderText;
     setTimeout(buttonPlacement, 2500);
 }
@@ -29,10 +31,11 @@ targetButton.addEventListener('click', () => {
     header.textContent = `it took ${timed}s to click the target`;
     if(timed < 1){
         counter++;
+        totalTime += timed;
         header.textContent = `${header.textContent}, ${counter}/15`
         if(counter === 15){
             const h1 = document.createElement('h1');
-            h1.textContent = "Congrats you managed to click the target 15 times!";
+            h1.textContent = `Congrats you managed to click the target 15 times!, with an average time per target of ${totalTime/counter} seconds`;
             h1.classList.add("congrats");
             container.appendChild(h1);
             return;
