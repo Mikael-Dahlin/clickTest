@@ -6,7 +6,7 @@ const originalHeaderText = header.textContent;
 const squareSize = 80;
 const side = `${squareSize}px`
 let showButtonTime;
-let clickButatonTime;
+let clickButtonTime;
 let counter;
 
 const buttonSetup = () => {
@@ -26,13 +26,13 @@ targetButton.addEventListener('click', () => {
     clickButtonTime = new Date();
     targetButton.style.display = 'none';
     const timed = (clickButtonTime.getTime() - showButtonTime.getTime()) / 1000
-    header.textContent = `it took ${timed}s to click the button`;
+    header.textContent = `it took ${timed}s to click the target`;
     if(timed < 1){
         counter++;
         header.textContent = `${header.textContent}, ${counter}/15`
         if(counter === 15){
             const h1 = document.createElement('h1');
-            h1.textContent = "Congrats you managed to click the button 15 times!";
+            h1.textContent = "Congrats you managed to click the target 15 times!";
             h1.classList.add("congrats");
             container.appendChild(h1);
             return;
@@ -41,17 +41,17 @@ targetButton.addEventListener('click', () => {
         setTimeout(buttonPlacement, delay);
     }
     else{
-        header.textContent = `Sorry, ${header.textContent}, you managed to get ${counter} buttons.`
+        header.textContent = `Sorry, ${header.textContent}, you managed to get ${counter} targets.`
         return;
     }
 });
 
-console.log(container.clientHeight);
-console.log(container.clientWidth);
-console.log(targetButton.clientHeight);
-console.log(targetButton.clientWidth);
-
 const randomizer = (element, size) => {
+    const randomColor = Math.ceil(Math.random()*4);
+    if (randomColor === 1) {targetButton.style.backgroundColor = 'red'};
+    if (randomColor === 2) {targetButton.style.backgroundColor = 'blue'};
+    if (randomColor === 3) {targetButton.style.backgroundColor = 'yellow'};
+    if (randomColor === 4) {targetButton.style.backgroundColor = 'violet'};
     const maxHeight = container.clientHeight - size;
     const maxWidth = container.clientWidth - size;
     const randomHeight = Math.floor(Math.random()*maxHeight);

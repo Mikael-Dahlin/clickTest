@@ -27,6 +27,7 @@
   background-color: yellow;
   height: 80px;
   width: 80px;
+  border-radius: 50%;
 }
 
 .congrats {
