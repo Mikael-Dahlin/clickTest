@@ -51,10 +51,10 @@ targetButton.addEventListener('click', () => {
 
 const randomizer = (element, size) => {
     const randomColor = Math.ceil(Math.random()*4);
-    if (randomColor === 1) {targetButton.style.backgroundColor = 'red'};
-    if (randomColor === 2) {targetButton.style.backgroundColor = 'blue'};
-    if (randomColor === 3) {targetButton.style.backgroundColor = 'yellow'};
-    if (randomColor === 4) {targetButton.style.backgroundColor = 'violet'};
+    if (randomColor === 1) {element.style.backgroundColor = 'red'};
+    if (randomColor === 2) {element.style.backgroundColor = 'blue'};
+    if (randomColor === 3) {element.style.backgroundColor = 'yellow'};
+    if (randomColor === 4) {element.style.backgroundColor = 'violet'};
     const maxHeight = container.clientHeight - size;
     const maxWidth = container.clientWidth - size;
     const randomHeight = Math.floor(Math.random()*maxHeight);
